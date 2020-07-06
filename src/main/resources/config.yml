@@ -1,0 +1,19 @@
+
+#RegionRegenerator - By Dead_Light
+#Copyright July 2020
+#For GamePixel
+
+RegenerativeBlocks:
+  - DIAMOND_ORE
+  - GOLD_ORE
+  - IRON_ORE
+  - REDSTONE_ORE
+  - STONE
+
+
+#The time it takes to regenerate that block
+RegenerationAfter: 10
+
+#Regions that are going to be protected and regenerative
+RegenerativeRegions:
+  - none

@@ -1,0 +1,9 @@
+name: RegionRegenerator
+version: ${project.version}
+main: deadlight.regionregenerator.RegionRegenerator
+authors: [Dead_Light]
+description: Add as many regions as you want and make the region ores regenerate after being broken
+depend: [WorldGuard]
+commands:
+  rr:
+    description: main command for RegionRegenerator plugin.
