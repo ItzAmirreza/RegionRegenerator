@@ -2,10 +2,7 @@ package deadlight.regionregenerator.events;
 
 import com.sk89q.worldguard.protection.managers.RegionManager;
 import deadlight.regionregenerator.Main;
-import org.bukkit.Bukkit;
-import org.bukkit.Location;
-import org.bukkit.Material;
-import org.bukkit.World;
+import org.bukkit.*;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.BlockBreakEvent;
@@ -29,7 +26,7 @@ public class BlockBreakListener implements Listener {
 
         if (!rBlocks.contains(e.getBlock().getType().name())) return;
         if (e.getPlayer().hasPermission("rr.admin")) return;
-
+        e.getPlayer().playSound(e.getBlock().getLocation(), Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 0.3F, 1F);
         for (String s : regions) {
             if (rm.getRegion(s).contains(e.getBlock().getX(), e.getBlock().getY(), e.getBlock().getZ())) {
                 breakBlocks(e.getBlock().getType(), e.getBlock().getX(), e.getBlock().getY(), e.getBlock().getZ(), e.getBlock().getWorld());
